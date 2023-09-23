@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+}
+
+#header-1 {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--tertiary);
+  height: 10px;
+  padding: 5px;
+  color: #33333397;
+  margin: 0;
+}
+
+:root {
+  --bg-color: #fff;
+  --color:#1E0E4E;
+  --primary: #EDC535;
+  --secondary: #F85531;
+  --tertiary: #A98CFF;
+}
+
+
