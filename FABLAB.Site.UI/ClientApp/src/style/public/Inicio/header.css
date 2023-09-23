@@ -1,0 +1,100 @@
+.main-header {
+	height: 90vh;
+	background: linear-gradient(#1e0e4e, #1e0e4e89),
+		url(../../../../public/img/fablab_background.jpeg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	color: #eee;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	flex-direction: column;
+}
+
+.main-header p {
+	width: 100%;
+	max-width: 800px;
+	font-size: 1.4em;
+	padding: 1em;
+	text-align: center;
+}
+
+.main-header p > b:nth-child(1) {
+	color: var(--primary);
+}
+
+.main-header p > b:nth-child(2) {
+	color: var(--secondary);
+}
+
+.header-content {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 10px;
+	display: grid;
+	grid-template-columns: 180px 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas:
+		"logo h1"
+		"logo span";
+	gap: 10px;
+}
+
+.header-content img {
+	grid-area: logo;
+	transition: transform 0.7s ease-in-out;
+}
+
+.header-content img:hover {
+	transform: rotate(120deg);
+}
+
+.header-content h1 {
+	display: flex;
+	align-items: end;
+	margin: 0;
+	grid-area: h1;
+	font-size: 80px;
+	transition: color 0.3s;
+}
+
+.header-content img:hover ~ h1 b {
+	color: var(--tertiary);
+}
+
+.header-content span {
+	grid-area: span;
+	text-align: left;
+	font-size: 20px;
+	color: #ffe483;
+}
+
+@media screen and (max-width: 720px) {
+	.header-content {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+		grid-template-areas:
+			"logo"
+			"h1"
+			"span";
+		gap: 0px;
+		place-items: center;
+		gap: 1em;
+	}
+
+	.header-content h1 {
+		font-size: 50px;
+	}
+
+	.header-content span {
+		line-height: 1.5;
+		text-align: center;
+	}
+
+	.main-header p {
+		opacity: 0.6;
+	}
+}

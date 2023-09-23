@@ -1,0 +1,119 @@
+.section-contain {
+	padding: 50px 0;
+	display: grid;
+	gap: 20px;
+}
+/* CARDS */
+
+.card-home {
+	display: grid;
+	grid-template-columns: 1.5fr 1fr;
+	grid-template-rows: 1fr 5px 2fr;
+	grid-template-areas:
+		"h2 img"
+		"hr img"
+		"desc img";
+}
+.card-home-inverse {
+	grid-template-columns: 1fr 1.5fr;
+	grid-template-areas:
+		"img h2"
+		"img hr"
+		"img desc";
+}
+.card-home h2 {
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	font-weight: 600;
+	grid-area: h2;
+	margin: 0;
+	font-size: 2em;
+	color: var(--color);
+	padding-bottom: 15px;
+}
+
+.card-home div {
+	grid-area: img;
+	background: var(--color);
+	padding: 5px;
+	border-radius: 5px;
+}
+.card-home span {
+	place-content: center;
+	width: 90%;
+	grid-area: hr;
+	margin: 0 auto;
+	height: 5px;
+	background-color: var(--color);
+}
+.card-home p {
+	grid-area: desc;
+	font-size: 1.4em;
+	text-align: center;
+	line-height: 1.5;
+	padding-top: 15px;
+}
+.card-home div img {
+	border-radius: 5px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@media (max-width: 720px) {
+	.section-contain {
+		margin-top: 25px;
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.card-home {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.card-home h2 {
+		position: absolute;
+		color: #eee;
+		font-size: 0.8em;
+		top: 4px;
+		left: 4px;
+		font-weight: lighter;
+	}
+
+	.card-home p,
+	.card-home span {
+		display: none;
+	}
+
+	.card-home {
+		width: 60%;
+		position: absolute;
+	}
+	.card-home-inverse {
+		right: 0;
+		top: 60%;
+		width: 60%;
+		position: absolute;
+	}
+	.card-home div {
+		padding-top: 25px;
+	}
+
+	.card-home div::before {
+		top: 4px;
+		right: 4px;
+		position: absolute;
+		background: var(--secondary);
+		content: "diseño 3D";
+		font-size: 0.7em;
+		height: 15px;
+		border-radius: 4px;
+		padding: 0 3px;
+	}
+	.card-home-inverse div::before {
+		content: "robótica";
+	}
+}

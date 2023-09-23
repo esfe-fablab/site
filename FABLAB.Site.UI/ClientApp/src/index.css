@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg-color: #fff;
+  --color:#1E0E4E;
+  --primary: #EDC535;
+  --secondary: #F85531;
+  --tertiary: #A98CFF;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -21,13 +29,8 @@ body {
   color: #33333397;
   margin: 0;
 }
-
-:root {
-  --bg-color: #fff;
-  --color:#1E0E4E;
-  --primary: #EDC535;
-  --secondary: #F85531;
-  --tertiary: #A98CFF;
+.container {
+  max-width: 0 auto;
 }
 
 
