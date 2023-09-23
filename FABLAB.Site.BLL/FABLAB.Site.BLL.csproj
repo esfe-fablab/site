@@ -1,8 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
     <ProjectReference Include="..\FABLAB.Site.EN\FABLAB.Site.EN.csproj" />
     <ProjectReference Include="..\FABLAB.Site.DAL\FABLAB.Site.DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Utils\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.2.0" />
   </ItemGroup>
 
   <PropertyGroup>
