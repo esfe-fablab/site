@@ -14,4 +14,12 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DataContext\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FABLAB.Site.EN\FABLAB.Site.EN.csproj" />
+  </ItemGroup>
+
 </Project>

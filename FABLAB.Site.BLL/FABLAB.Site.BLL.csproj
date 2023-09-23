@@ -1,5 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\FABLAB.Site.EN\FABLAB.Site.EN.csproj" />
+    <ProjectReference Include="..\FABLAB.Site.DAL\FABLAB.Site.DAL.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
