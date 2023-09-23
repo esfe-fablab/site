@@ -6,12 +6,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Utils\" />
-    <Folder Include="Services\" />
+    <PackageReference Include="MailKit" Version="4.2.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MailKit" Version="4.2.0" />
+    <Folder Include="Services\Utils\" />
   </ItemGroup>
 
   <PropertyGroup>
