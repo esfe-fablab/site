@@ -1,0 +1,202 @@
+# Archivos de solución
+*.suo
+*.sln
+*.user
+*.suo
+*.vscode/
+.vs/
+
+# Carpeta bin y obj generadas por compiladores
+bin/
+obj/
+
+# Carpeta de dependencias (paquetes NuGet)
+## Puede ser específica de la ubicación de tus paquetes NuGet, asegúrate de que coincida
+## con la ubicación real si has personalizado la carpeta de paquetes
+packages/
+
+# Carpeta de caché de Roslyn
+## Evita subir la carpeta de caché de Roslyn, que puede ser generada automáticamente
+## por Visual Studio
+.vscode/
+
+# Carpeta de usuario de Visual Studio
+## Ignora archivos generados por el usuario y configuraciones personales de Visual Studio
+.vscode/
+
+# Carpeta de registro de Visual Studio
+## Ignora los archivos de registro de Visual Studio
+*.log
+
+# Carpeta de configuración del usuario de Rider
+.idea/
+
+# Archivos temporales generados por Rider
+.idea/
+
+# Archivos de copias de seguridad de Rider
+*.sln.bak
+*.csproj.bak
+
+# Carpeta de caché de Rider
+.idea/cache/
+
+# Carpeta de sistema de archivos de Rider
+.idea/misc.xml
+
+# Carpeta de solución de Rider
+.idea/modules.xml
+
+# Carpetas y archivos generados por Rider
+.idea/CodeStyles/
+.idea/dictionaries/
+.idea/vcs/
+.idea/wwwroot/
+.idea/libraries/
+.idea/assetWizardSettings.xml
+.idea/redeployment.xml
+.idea/inspectionProfiles/
+.idea/usage.statistics.xml
+.idea/tasks.xml
+
+# Carpeta de caché de Visual Studio Code
+.vscode/
+
+# Carpeta de configuración de Rider
+.idea/
+
+# Carpeta de archivos de salida de Rider
+.idea/rider/
+
+# Carpeta de caché de Rider
+.idea/cache/
+
+# Carpeta de inspecciones de Rider
+.idea/inspectionProfiles/
+
+# Carpeta de solución de Rider
+.idea/modules.xml
+
+# Archivos temporales generados por Rider
+.idea/misc.xml
+
+# Carpetas y archivos generados por Rider
+.idea/usage.statistics.xml
+.idea/tasks.xml
+
+# Archivos de usuario específicos de Rider
+.idea/workspace.xml
+.idea/vcs.xml
+
+# Carpeta de respuestas generadas por Rider
+.idea/replstate.xml
+
+# Carpetas generadas por el depurador de Rider
+.idea/debugger/
+.idea/idea.sln.iml
+.idea/idea.sln
+.idea/inspect/.idea/inspect/
+
+# Carpeta de Visual Studio Code
+.vscode/
+
+# Carpeta de resharper
+_ReSharper.*/
+
+# Carpeta de Rider
+.idea/
+
+# Carpeta de caché de Rider
+.idea/cache/
+.idea/.baseline/
+
+# Carpeta de resharper
+ReSharper*/
+
+# Carpeta de caché de Rider
+.idea/cache/
+.idea/caches/
+.idea/caches/compile-server/
+.idea/caches/webroots/
+
+# Carpetas de Rider
+.idea/assetWizardSettings.xml
+.idea/cs/caches/
+.idea/cs/scopes/
+.idea/dictionaries/
+.idea/inspectionProfiles/
+.idea/inspectionProfiles/Project_Default.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/libraries/
+.idea/misc.xml
+.idea/redeployment.xml
+.idea/references.xml
+.idea/rider/
+.idea/runConfigurations/
+.idea/runConfigurations/Project.xml
+.idea/runConfigurations/Project.xml
+.idea/runConfigurations/Test.xml
+.idea/runConfigurations/Test.xml
+.idea/tasks.xml
+.idea/userHistory.xml
+.idea/version.txt
+.idea/vcs.xml
+.idea/watcherTasks.xml
+.idea/workspace.xml
+.idea/.editorconfig
+.idea/.gitignore
+.idea/.name
+.idea/.vcs.xml
+.idea/cs/misc.xml
+.idea/cs/vcs.xml
+.idea/idea.SolutionTasks.xml
+.idea/idea.Tasks.xml
+.idea/inspectionProfiles/Project_RiderAndReSharper.xml
+.idea/inspectionProfiles/Project_ReSharper.xml
+.idea/revisions.xml
+.idea/usage.statistics.xml
+.idea/webServers.xml
+
+# Carpeta de Rider
+.idea/.directory/
+
+# Carpeta de Rider
+.idea/RunConfigurations.xml
+
+# Carpeta de Rider
+.idea/inspectionProfiles/
+
+# Carpeta de Rider
+.idea/scopes/
+
+# Carpeta de Rider
+.idea/modules.xml
+
+# Carpeta de Rider
+.idea/vcs.xml
+
+# Carpeta de Rider
+.idea/revisions.xml
+
+# Carpeta de Rider
+.idea/workspace.xml
+
+# Carpeta de Rider
+.idea/runConfigurations/
+
+# Carpeta de Rider
+.idea/scopes/scope_settings.xml
+
+# Carpeta de Rider
+.idea/webServers.xml
+
+# Archivos y carpetas específicos de Rider
+.idea/runConfigurations/MSpec.xml
+.idea/runConfigurations/NUnit.xml
+.idea/runConfigurations/xunit.xml
+
+# Carpeta bin de Rider
+.idea/bin/
+.idea/caches/
+
+# Archivos de caché de Rider
