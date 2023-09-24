@@ -33,7 +33,7 @@ namespace FABLAB.Site.BLL.Services
         /// <sumary>
         /// Login de usuario
         /// </sumary>
-        public async Task<SystemUser?> Validate(string UserName, string Password)
+        public async Task<SystemUser> Validate(string UserName, string Password)
         {
             try
             {
