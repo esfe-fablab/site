@@ -1,4 +1,5 @@
-﻿using FABLAB.Site.DAL;
+﻿using FABLAB.Site.BLL.DTOs;
+using FABLAB.Site.DAL;
 using FABLAB.Site.EN;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FABLAB.Site.BLL.Services
 {
-    public class ArticleService
+    public class ArticleService : IArticleService
     {
         private readonly IGenericRepository<Article> repo;
         public ArticleService(IGenericRepository<Article> _repo)
@@ -23,7 +24,24 @@ namespace FABLAB.Site.BLL.Services
 
         public Task<bool> Delete(int id) => repo.Delete(id);
 
-        public Task<IQueryable<Article>> GetAll() => repo.GetAll();
+        public async Task<List<ArticleDTO>> GetAll()
+        {
+            var query = await repo.GetAll();
+
+            List<ArticleDTO> articles = query.Select(a => new ArticleDTO
+            {
+                Id = a.Id,
+                Title = a.Title,
+                Content = a.Content, 
+                Description = a.Description,
+                Keywords = a.Keywords,
+                ArticleState = a.ArticleState.Name,
+                ArticleType = a.ArticleType.Name
+
+            }).ToList();
+
+            return articles;
+        }
 
         public async Task<Article?> GetById(int id) => await repo.GetById(id);
 

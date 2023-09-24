@@ -1,4 +1,5 @@
-﻿using FABLAB.Site.EN;
+﻿using FABLAB.Site.BLL.DTOs;
+using FABLAB.Site.EN;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace FABLAB.Site.BLL.Services
         Task<bool> Create(Article model);
         Task<bool> Update(Article model);
         Task<bool> Delete(int id);
-        Task<IQueryable<Article>> GetAll();
+        Task<List<ArticleDTO>> GetAll();
         Task<Article?> GetById(int id);
     }
 }
