@@ -2,6 +2,7 @@
 using FABLAB.Site.BLL.Services;
 using FABLAB.Site.EN;
 using FABLAB.Site.BLL.DTOs;
+using FABLAB.Site.UI.Schemas;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -26,9 +27,19 @@ namespace FABLAB.Site.UI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Insertar([FromBody] Article data)
+        public async Task<IActionResult> Insertar([FromBody] ArticleSchema.Create articleDTO)
         {
-            bool result = await _ArticleService.Create(data);
+            var newArticle = new Article
+            {
+                Title = articleDTO.Title,
+                Content = articleDTO.Content,
+                Description = articleDTO.Description,
+                Keywords = articleDTO.Keywords,
+                ArticleStateId = articleDTO.ArticleStateId,
+                ArticleTypeId = articleDTO.ArticleTypeId,
+                SystemUserId = articleDTO.SystemUserId
+            };
+            bool result = await _ArticleService.Create(newArticle);
 
             return StatusCode(StatusCodes.Status200OK, new { success = result });
         }

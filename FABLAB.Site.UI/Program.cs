@@ -22,8 +22,10 @@ builder.Services.AddDbContext<FabLabDbContext>(options =>
 
 
 builder.Services.AddScoped<IGenericRepository<SystemUser>, SystemUserRepository>();
+builder.Services.AddScoped<IGenericRepository<Article>, ArticleRepository>();
 builder.Services.AddScoped<ISystemUserService, SystemUserService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IArticleService, ArticleService>();
 
 var key = builder.Configuration.GetValue<string>("JwtSettings:key");
 var keyBytes = Encoding.ASCII.GetBytes(key);
