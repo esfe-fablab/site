@@ -26,18 +26,26 @@ namespace FABLAB.Site.UI.Controllers
             return Ok(articles);
         }
 
+        [HttpGet]
+        [Route("notice")]
+        public async Task<IActionResult> GetNotices()
+        {
+            List<ArticleDTO> articles = await _ArticleService.GetAll();
+            var filter = articles.Where(article => article.ArticleType == "Noticia").ToList();
+            return Ok(filter);
+        }
         [HttpPost]
-        public async Task<IActionResult> Insertar([FromBody] ArticleSchema.Create articleDTO)
+        public async Task<IActionResult> Insertar([FromBody] ArticleSchema.Create article)
         {
             var newArticle = new Article
             {
-                Title = articleDTO.Title,
-                Content = articleDTO.Content,
-                Description = articleDTO.Description,
-                Keywords = articleDTO.Keywords,
-                ArticleStateId = articleDTO.ArticleStateId,
-                ArticleTypeId = articleDTO.ArticleTypeId,
-                SystemUserId = articleDTO.SystemUserId
+                Title = article.Title,
+                Content = article.Content,
+                Description = article.Description,
+                Keywords = article.Keywords,
+                ArticleStateId = article.ArticleStateId,
+                ArticleTypeId = article.ArticleTypeId,
+                SystemUserId = article.SystemUserId
             };
             bool result = await _ArticleService.Create(newArticle);
 
