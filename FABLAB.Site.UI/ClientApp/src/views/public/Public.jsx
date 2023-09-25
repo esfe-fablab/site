@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
-import { Inicio } from './pages'
+import { Inicio, Blog, Aprende} from './pages'
 
 import '../../style/public/index.css'
 
@@ -10,6 +10,8 @@ const Public = () => {
     <Layout>
       <Routes>
         <Route path='/' element={<Inicio />}></Route>
+        <Route path='/blog' element={<Blog />}></Route>
+        <Route path='/aprende' element={<Aprende />}></Route>
       </Routes>
     </Layout>
   )

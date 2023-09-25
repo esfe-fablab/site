@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { NavLink } from 'react-router-dom'
 import React from 'react'
 import './_navbar.css'
 
@@ -11,10 +12,9 @@ export default function _NavBar() {
       <nav className="navbar">
         <img src="/img/logo/esfe-logo.png" alt="logo-esfe" />
         <ul>
-          <a href="#">Inicio</a>
-          <a href="#">Articulos</a>
-          <a href="#">Proyectos</a>
-          <a href="#">Aprender</a>
+          <NavLink to="/">Inicio</NavLink>
+          <NavLink to="/blog">Blog</NavLink>
+          <NavLink to="/aprende">Aprende</NavLink>
           <a className="butn" href="#">Login</a>
           <a className="butn butn-i" href="#">Register</a>
         </ul>

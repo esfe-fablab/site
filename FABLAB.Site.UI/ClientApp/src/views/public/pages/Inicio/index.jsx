@@ -2,7 +2,7 @@ import React from 'react'
 
 const Inicio = () => {
   return (
-    <main className='container'>
+    <main>
       <header class="main-header">
         <div class="header-content">
           <img src="/img/logo/fablab-logo.svg" alt="logo-fablab" />
