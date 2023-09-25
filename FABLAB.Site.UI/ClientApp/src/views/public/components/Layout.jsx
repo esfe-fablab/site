@@ -7,7 +7,6 @@ const Layout = ({children}) => {
 
       <NavBar />
       {children}
-      <h2>Eliseo</h2>
     </>
   )
 }

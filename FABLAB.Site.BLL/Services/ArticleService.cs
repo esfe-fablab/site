@@ -36,7 +36,8 @@ namespace FABLAB.Site.BLL.Services
                 Description = a.Description,
                 Keywords = a.Keywords,
                 ArticleState = a.ArticleState.Name,
-                ArticleType = a.ArticleType.Name
+                ArticleType = a.ArticleType.Name,
+                SystemUser = a.SystemUser.Name
              
             }).ToList();
 

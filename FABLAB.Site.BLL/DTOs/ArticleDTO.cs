@@ -15,5 +15,6 @@ namespace FABLAB.Site.BLL.DTOs
         public string? Keywords { get; set; }
         public string ArticleState { get; set; }
         public string ArticleType { get; set; }
+        public string SystemUser { get; set; }
     }
 }
