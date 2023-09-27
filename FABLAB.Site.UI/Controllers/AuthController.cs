@@ -18,7 +18,7 @@ namespace FABLAB.Site.UI.Controllers
 
 
         [HttpPost]
-        [Route("getAuth")]
+        [Route("get")]
         public async Task<IActionResult> Autenticar([FromBody] AuthRequest autorizacion)
         {
             var resultado_autorizacion = await _authService.GetToken(autorizacion);
@@ -27,6 +27,14 @@ namespace FABLAB.Site.UI.Controllers
 
             return Ok(resultado_autorizacion);
 
+        }
+
+        [Authorize]
+        [HttpPost]
+        [Route("verify")]
+        public async Task<IActionResult> Ping()
+        {
+            return Ok(true);
         }
     }
 }
