@@ -1,0 +1,127 @@
+/* Estilos básicos para Markdown */
+
+/* Estilo para el contenedor principal de contenido Markdown */
+.markdown-content {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #333; /* Color de texto predeterminado */
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+/* Estilo para encabezados */
+.markdown-content h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.markdown-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 18px;
+  margin-bottom: 14px;
+}
+
+.markdown-content h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+
+/* Estilo para párrafos */
+.markdown-content p {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+/* Estilo para enlaces */
+.markdown-content a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.markdown-content a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para listas no ordenadas */
+.markdown-content ul {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-left: 20px;
+}
+
+.markdown-content ul li {
+  margin-bottom: 6px;
+}
+
+/* Estilo para listas ordenadas */
+.markdown-content ol {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-left: 20px;
+}
+
+.markdown-content ol li {
+  margin-bottom: 6px;
+}
+
+/* Estilo para código en línea */
+.markdown-content code {
+  font-family: 'Courier New', monospace;
+  background-color: #f8f8f8;
+  padding: 2px 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Estilo para bloques de código */
+.markdown-content pre {
+  font-family: 'Courier New', monospace;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+/* Estilo para citas */
+.markdown-content blockquote {
+  border-left: 4px solid #007bff;
+  margin: 0 0 12px 0;
+  padding: 0 16px;
+  color: #777;
+}
+
+/* Estilo para imágenes */
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilo para tablas */
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.markdown-content th, .markdown-content td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Estilo para elementos de lista */
+.markdown-content ul ul, .markdown-content ul ol, .markdown-content ol ul, .markdown-content ol ol {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+/* Personaliza más según tus necesidades */
