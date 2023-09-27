@@ -34,6 +34,24 @@ namespace FABLAB.Site.UI.Controllers
             var filter = articles.Where(article => article.ArticleType == "Noticia").ToList();
             return Ok(filter);
         }
+
+        [HttpGet]
+        [Route("notice/{id:int}")]
+        public async Task<IActionResult> GetNoticeById(int id)
+        {
+            List<ArticleDTO> articles = await _ArticleService.GetAll();
+            var filter = articles.Where(article => article.ArticleType == "Noticia").ToList();
+
+            var article = filter.FirstOrDefault(a => a.Id == id);
+
+            if (article == null)
+            {
+                return NotFound();
+            }
+            return Ok(article);
+        }
+
+
         [HttpPost]
         public async Task<IActionResult> Insertar([FromBody] ArticleSchema.Create article)
         {
