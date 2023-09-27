@@ -23,13 +23,13 @@ const Blog = () => {
 
   return (
     <section>
-      <div className='mt-9'>
+      <div className='mt-9 mb-3'>
         <h1 className='mt-6 text-5xl text-center'>Blog</h1>
       </div>
 
       <div className='container-cards'>
         {notices.map((notice) => (
-          <Card key={notice.id} title={notice.title} description={notice.description} user={notice.systemUser}/>
+          <Card key={notice.id} title={notice.title} description={notice.description} user={notice.systemUser} id={notice.id}/>
         ))}
       </div>
     </section>

@@ -1,9 +1,10 @@
 import React from 'react'
 import { Avatar, AvatarFallback, AvatarImage} from '../../../../shared/components/Avatar'
+import { Link } from 'react-router-dom'
 
-const Card = ({title, description, img = "", user}) => {
+const Card = ({title, description, img = "", user, id}) => {
   return (
-    <div className="card">
+    <Link to={"/blog/"+id} className="card">
     <div className="card__header">
       {
         img === "" ? null : <img src={`${img}`} alt="card__image" className="card__image" width="600" />
@@ -27,7 +28,7 @@ const Card = ({title, description, img = "", user}) => {
         </div>
       </div>
     </div>
-  </div>
+  </Link>
   
   )
 }
