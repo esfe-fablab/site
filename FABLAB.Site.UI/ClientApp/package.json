@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mdxeditor/editor": "^1.0.1",
     "@radix-ui/react-avatar": "^1.0.4",
     "http-proxy-middleware": "^2.0.6",
     "merge": "^2.1.1",
