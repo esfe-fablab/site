@@ -34,29 +34,24 @@ function Private() {
 
   return (
     <div className="admin">
-      {
-        loading
-          ? <h1>cargando...</h1>
-          : <Routes>
-            {
-              validate ? (
-                <>
-                  <Route path="addArticle" element={<AddArticle />} />
-                  <Route path="dashboard" element={<Dashboard />} />
-                </>
 
-              ) : (
-                <Route path="/" element={<Navigate to="login" />} />
-              )
-            }
+      {loading ? (
+        <h1>cargando...</h1>
+      ) : (
+        <Routes>
+          {validate ? (
+            <>
+              <Route path="addArticle" element={<AddArticle />} />
+              <Route path="dashboard" element={<Dashboard />} />
+            </>
+          ) : (
+            <Route path="/*" element={<Navigate to="login" />} />
+          )}
 
-            <Route path="login" element={<Login />} />
-
-
-            <Route path="*" element={<h1>No existe</h1>} />
-          </Routes>
-
-      }
+          <Route path="*" element={<h1>NOT FOUND</h1>} />
+          <Route path="login" element={<Login />} />
+        </Routes>
+      )}
 
     </div>
   );

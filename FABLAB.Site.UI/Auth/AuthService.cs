@@ -38,7 +38,7 @@ namespace FABLAB.Site.UI.Auth
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = claims,
-                Expires = DateTime.UtcNow.AddMinutes(1),
+                Expires = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = credencialesToken
             };
 

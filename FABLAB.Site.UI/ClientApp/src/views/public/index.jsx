@@ -17,6 +17,8 @@ const Public = () => {
         <Route path='/blog' element={<Blog />}></Route>
         <Route path='/blog/:idBlog' element={<BlogView />}></Route>
         <Route path='/aprende' element={<Aprende />}></Route>
+        <Route path="*" element={<h1>NOT FOUND</h1>} />
+
       </Routes>
     </Layout>
   )
