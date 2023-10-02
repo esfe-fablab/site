@@ -5,7 +5,7 @@
 *.suo
 *.vscode/
 .vs/
-
+appsettings.json
 # Carpeta bin y obj generadas por compiladores
 bin/
 obj/
