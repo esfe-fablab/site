@@ -1,9 +1,7 @@
 import React from 'react'
 
-const Aprende = () => {
+export const Aprende = () => {
   return (
     <div>Aprende</div>
   )
 }
-
-export default Aprende

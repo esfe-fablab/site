@@ -1,7 +1,11 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
-import { Inicio, Blog, BlogView, Aprende} from './pages'
+// pages
+import { Aprende } from './Aprende'
+import { Blog } from './Blog'
+import { BlogView } from './Blog/[id]'
+import { Inicio } from './Inicio'
 
 import '../../style/public/index.css'
 

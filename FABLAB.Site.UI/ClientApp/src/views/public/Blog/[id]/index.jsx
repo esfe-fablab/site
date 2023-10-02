@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { getBlogById } from '../../../../shared/api/articles';
 import ReactMarkdown from 'react-markdown'; // Asegúrate de instalar esta biblioteca
 
-const BlogView = () => {
+export const BlogView = () => {
   const { idBlog } = useParams();
   const [loading, setLoading] = useState(true);
   const [blogContent, setBlogContent] = useState('');
@@ -44,5 +44,3 @@ const BlogView = () => {
     </div>
   );
 };
-
-export default BlogView;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Avatar, AvatarFallback, AvatarImage} from '../../../../shared/components/Avatar'
+import { Avatar, AvatarFallback, AvatarImage} from '../../../shared/components/Avatar'
 import { Link } from 'react-router-dom'
 
 const Card = ({title, description, img = "", user, id}) => {

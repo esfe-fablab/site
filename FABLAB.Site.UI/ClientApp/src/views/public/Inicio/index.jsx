@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Inicio = () => {
+export const Inicio = () => {
   return (
     <main>
       <header class="main-header">
@@ -47,5 +47,3 @@ const Inicio = () => {
     </main>
   )
 }
-
-export default Inicio

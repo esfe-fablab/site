@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Card from './Card';
-import { getNotice } from '../../../../shared/api/articles';
+import { getNotice } from '../../../shared/api/articles';
 
-const Blog = () => {
+export const Blog = () => {
   const [notices, setNotices] = useState([]);
 
   useEffect(() => {
@@ -36,4 +36,3 @@ const Blog = () => {
   );
 };
 
-export default Blog;
