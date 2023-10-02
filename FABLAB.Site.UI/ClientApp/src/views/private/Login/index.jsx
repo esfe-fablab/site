@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { authAdmin } from '../../../shared/api/auth';
 
-const Login = () => {
+export const Login = () => {
   const [credentials, setCredentials] = useState({
     UserName: '',
     Password: '',
@@ -23,7 +23,7 @@ const Login = () => {
       alert('CREDENCIALES INVALIDAS');
     } else {
       localStorage.setItem('authResult', JSON.stringify(result.token));
-      window.location.assign('/lab/');
+      window.location.assign('/lab/dashboard');
     }
   };
 
@@ -96,5 +96,3 @@ const Login = () => {
     </section>
   );
 };
-
-export default Login;

@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { postArticle } from '../../../shared/api/articles';
 
-const ArticleForm = () => {
+export const AddArticle = () => {
   const [formData, setFormData] = useState({
     Title: '',
     Content: '',
     Description: '',
     Keywords: '',
-    ArticleStateId: 4,
+    ArticleStateId: 1,
     ArticleTypeId: 2,
-    SystemUserId: 1,
+    SystemUserId: 2,
   });
 
   const handleChange = (e) => {
@@ -90,5 +90,3 @@ const ArticleForm = () => {
     </div>
   );
 };
-
-export default ArticleForm;

@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Public from './views/public'
-// import Private from './views/private'
+import Private from './views/private'
 import './index.css'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <>
       <Routes>
         <Route path='/*' element={<Public />}/>
-        {/* <Route path='/lab/*' element={<Private />}/> */}
+        <Route path='/lab/*' element={<Private />}/>
         
       </Routes>
     </>
