@@ -42,7 +42,7 @@ function Private() {
           {validate ? (
             <>
               <Route path="addArticle" element={<AddArticle />} />
-              <Route path="dashboard" element={<Dashboard />} />
+              <Route path="dashboard/*" element={<Dashboard />} />
             </>
           ) : (
             <Route path="/*" element={<Navigate to="login" />} />
