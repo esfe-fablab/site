@@ -1,7 +1,7 @@
-INSERT INTO ArticleType(Name) VALUES ('Guía'), ('Noticia'), ('Proyecto')
+INSERT INTO ArticleType(Name) VALUES ('GuÃ­a'), ('Noticia'), ('Proyecto')
 INSERT INTO ArticleState(Name) VALUES ('Publicado'), ('Archivado'), ('Pendiente')
 
-INSERT INTO Club(Name) VALUES ('Robótica'), ('Innovación'), ('Comunicación')
+INSERT INTO Club(Name) VALUES ('Robotica'), ('InnovaciÃ³n'), ('ComunicaciÃ³n')
 
 INSERT INTO Rol(Name) VALUES ('Admin'), ('Member')
 
