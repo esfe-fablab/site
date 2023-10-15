@@ -5,13 +5,14 @@ import arduino from 'react-syntax-highlighter/dist/esm/languages/prism/arduino'
 import { materialDark, materialLight } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 import { 
-  BiSolidMoon as MoonIcon, 
-  BiSolidSun as SunIcon,  
-  BiSolidCopy as CopyIcon} from 'react-icons/bi'
-import { HiMiniClipboardDocumentCheck as PasteIcon} from 'react-icons/hi2'
+  BiMoon as MoonIcon, 
+  BiSun as SunIcon,  
+  BiCopy as CopyIcon,
+  BiCheckCircle as PasteIcon
+} from 'react-icons/bi'
+// import { HiMiniClipboardDocumentCheck as PasteIcon} from 'react-icons/hi2'
 
 export const Code = ({ children, isDark, setIsDark }) => {
-  // console.log({children, language})
   const [isCopied, setIsCopied] = useState(false)
 
   SyntaxHighlighter.registerLanguage('arduino', arduino);
@@ -25,20 +26,20 @@ export const Code = ({ children, isDark, setIsDark }) => {
     <div className="code">
       <div className="code__icons">
         <button onClick={() => setIsDark(!isDark)}>
-          {isDark ? <MoonIcon /> : <SunIcon />}
+          {isDark ? <MoonIcon /> : <SunIcon className="dark__icon"/>}
         </button>
 
         <CopyToClipboard text={children}>
           <button onClick={() => setCopied()}>
             {isCopied
-              ? <span title="Copied!"><PasteIcon /></span>
-              : <span title="Copy to Clipboard"><CopyIcon /></span>
+              ? <span title="Copiado!"><PasteIcon className={!isDark ? 'dark__icon': null}/></span>
+              : <span title="Copiar al portapapeles"><CopyIcon className={!isDark ? 'dark__icon': null}/></span>
             }
           </button>
         </CopyToClipboard>
       </div>
 
-      <SyntaxHighlighter language="arduino" style={isDark ? materialDark : materialLight}>
+      <SyntaxHighlighter className="code__container" language="arduino" style={isDark ? materialDark : materialLight}>
         {children}
       </SyntaxHighlighter>
     </div>
