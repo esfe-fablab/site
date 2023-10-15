@@ -1,10 +1,11 @@
 import React from 'react'
-import { AddArticle } from './AddArticle'
+import { AddArticle } from './NewArticle'
 
 export const Articulos = () => {
   return (
-    <div>
+    <div className='max-w-[700px] mx-auto prose'>
       <AddArticle />
+
     </div>
   )
 }

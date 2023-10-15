@@ -37,7 +37,7 @@ export const BlogView = () => {
       {loading ? (
         <p>Cargando...</p>
       ) : (
-        <div className="markdown-content">
+        <div className="markdown-content prose">
           <ReactMarkdown>{blogContent}</ReactMarkdown>
         </div>
       )}

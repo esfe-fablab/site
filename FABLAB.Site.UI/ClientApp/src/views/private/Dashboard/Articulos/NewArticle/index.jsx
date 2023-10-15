@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { postArticle } from '../../../../../shared/api/articles';
+import Editor from '../MDXEditor'
 
 export const AddArticle = () => {
+  const [markdown, setmarkdown] = useState('')
   const [formData, setFormData] = useState({
     Title: '',
     Content: '',
@@ -24,6 +26,7 @@ export const AddArticle = () => {
     e.preventDefault();
     try {
       // Llama al método postArticle para guardar los datos
+    formData.Content = markdown;
     await postArticle(formData);
     window.location.assign('/blog/');
       
@@ -49,7 +52,7 @@ export const AddArticle = () => {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="Content" className="block text-gray-700">Contenido del artículo:</label>
+          {/* <label htmlFor="Content" className="block text-gray-700">Contenido del artículo:</label>
           <textarea
             id="Content"
             name="Content"
@@ -57,7 +60,8 @@ export const AddArticle = () => {
             onChange={handleChange}
             required
             className="w-full p-2 border rounded-md focus:outline-none focus:border-blue-500"
-          />
+          /> */}
+          <Editor setMdxContent={setmarkdown}/>
         </div>
         <div className="mb-4">
           <label htmlFor="Description" className="block text-gray-700">Descripción del artículo:</label>
