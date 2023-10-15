@@ -1,23 +1,19 @@
 import { useState } from "react"
 import { CopyToClipboard } from "react-copy-to-clipboard"
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
-import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx'
 import arduino from 'react-syntax-highlighter/dist/esm/languages/prism/arduino'
 import { materialDark, materialLight } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 import { 
   BiSolidMoon as MoonIcon, 
-  BiSolidSun as SunIcon, 
-  // BiSolidPaste as PasteIcon, 
+  BiSolidSun as SunIcon,  
   BiSolidCopy as CopyIcon} from 'react-icons/bi'
 import { HiMiniClipboardDocumentCheck as PasteIcon} from 'react-icons/hi2'
-// import { CopyIcon, PasteIcon, SunIcon, MoonIcon } from "../assets/icons"
-// import '../styles/Code.css'
 
-export const Code = ({ children, language, isDark, setIsDark }) => {
+export const Code = ({ children, isDark, setIsDark }) => {
+  // console.log({children, language})
   const [isCopied, setIsCopied] = useState(false)
 
-  SyntaxHighlighter.registerLanguage('jsx', jsx);
   SyntaxHighlighter.registerLanguage('arduino', arduino);
 
   const setCopied = () => {
@@ -42,7 +38,7 @@ export const Code = ({ children, language, isDark, setIsDark }) => {
         </CopyToClipboard>
       </div>
 
-      <SyntaxHighlighter language={'arduino'} style={isDark ? materialDark : materialLight}>
+      <SyntaxHighlighter language="arduino" style={isDark ? materialDark : materialLight}>
         {children}
       </SyntaxHighlighter>
     </div>

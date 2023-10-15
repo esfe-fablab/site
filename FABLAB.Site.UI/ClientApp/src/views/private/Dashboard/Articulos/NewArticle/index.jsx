@@ -4,6 +4,7 @@ import Editor from '../MDXEditor'
 
 export const AddArticle = () => {
   const [markdown, setmarkdown] = useState('')
+  console.log(markdown)
   const [formData, setFormData] = useState({
     Title: '',
     Content: '',

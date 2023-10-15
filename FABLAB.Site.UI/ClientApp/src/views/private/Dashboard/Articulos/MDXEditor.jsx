@@ -27,17 +27,7 @@ import {
   ConditionalContents,
   ChangeCodeMirrorLanguage
 } from '@mdxeditor/editor'
-
-const defaultArduinoCode = `
-void setup() {
-  // Inicializa el código de configuración
-}
-
-void loop() {
-  // Código principal del bucle
-}
-`.trim();
-
+  
 function App({setMdxContent}) {
   return (
     <MDXEditor
@@ -79,7 +69,7 @@ function App({setMdxContent}) {
         markdownShortcutPlugin(),
         // tablePlugin,
         codeBlockPlugin({ defaultCodeBlockLanguage: 'arduino'}),
-        codeMirrorPlugin({ codeBlockLanguages: { js: 'JavaScript', css: 'CSS', arduino: 'arduino' }}),
+        codeMirrorPlugin({ codeBlockLanguages: { arduino: 'arduino' }}),
       ]}
 
     />

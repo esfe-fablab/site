@@ -32,31 +32,31 @@ export const BlogView = () => {
 
     // Llamar a la función de carga del blog
     fetchBlogContent();
-  }, [idBlog]); 
+  }, [idBlog]);
 
   return (
     <div className="container">
-      
+
       {loading ? (
         <p>Cargando...</p>
       ) : (
         <div className="markdown-content prose">
           <Markdown
-            // options={{overrides: { code}}}
-
             options={{
               overrides: {
                 code: {
                   component: Code,
                   props: {
                     isDark,
-                    setIsDark
-                  }
-                }
-              }
+                    setIsDark,
+                  },
+                },
+              },
             }}
+          >
+            {blogContent}
+          </Markdown>
 
-          >{blogContent}</Markdown>
         </div>
       )}
     </div>
