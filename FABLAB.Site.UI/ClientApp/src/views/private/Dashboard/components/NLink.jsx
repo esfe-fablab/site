@@ -8,7 +8,7 @@ const active = "flex items-center px-6 py-4 text-gray-500 bg-gray-700 bg-opacity
 export const NLink = ({text, path, children}) => {
   return (
     <NavLink className={({isActive})=> (isActive? active : normal)} to={path}>
-      { children }
+      <span className='text-[24px] translate-y-[-2.5px]'>{ children }</span>
       <span className="mx-3">{text}</span>
     </NavLink>
   )
