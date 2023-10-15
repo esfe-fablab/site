@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { postArticle } from '../../../shared/api/articles';
+import { postArticle } from '../../../../../shared/api/articles';
 
 export const AddArticle = () => {
   const [formData, setFormData] = useState({

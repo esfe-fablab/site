@@ -4,7 +4,6 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import { verify } from '../../shared/api/auth';
 
 // Pages
-import { AddArticle } from './AddArticle'
 import { Dashboard } from './Dashboard'
 import { Login } from './Login'
 
@@ -41,7 +40,6 @@ function Private() {
         <Routes>
           {validate ? (
             <>
-              <Route path="addArticle" element={<AddArticle />} />
               <Route path="dashboard/*" element={<Dashboard />} />
             </>
           ) : (

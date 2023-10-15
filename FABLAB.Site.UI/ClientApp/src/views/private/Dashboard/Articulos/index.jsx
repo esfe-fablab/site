@@ -1,7 +1,10 @@
 import React from 'react'
+import { AddArticle } from './AddArticle'
 
 export const Articulos = () => {
   return (
-    <div>Articulos</div>
+    <div>
+      <AddArticle />
+    </div>
   )
 }
