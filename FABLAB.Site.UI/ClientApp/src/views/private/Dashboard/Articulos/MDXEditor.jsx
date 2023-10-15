@@ -78,8 +78,8 @@ function App({setMdxContent}) {
         linkDialogPlugin(),
         markdownShortcutPlugin(),
         // tablePlugin,
-        codeBlockPlugin({ defaultCodeBlockLanguage: 'js'}),
-        codeMirrorPlugin({ codeBlockLanguages: { js: 'JavaScript', css: 'CSS'} }),
+        codeBlockPlugin({ defaultCodeBlockLanguage: 'arduino'}),
+        codeMirrorPlugin({ codeBlockLanguages: { js: 'JavaScript', css: 'CSS', arduino: 'arduino' }}),
       ]}
 
     />

@@ -72,23 +72,10 @@
 }
 
 /* Estilo para código en línea */
-.markdown-content code {
-  font-family: 'Courier New', monospace;
-  background-color: #f8f8f8;
-  padding: 2px 4px;
-  border: 1px solid #ccc;
+.code {
   border-radius: 4px;
 }
 
-/* Estilo para bloques de código */
-.markdown-content pre {
-  font-family: 'Courier New', monospace;
-  background-color: #f8f8f8;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  overflow-x: auto;
-}
 
 /* Estilo para citas */
 .markdown-content blockquote {
@@ -108,7 +95,7 @@
 .markdown-content table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 12px;
+  margin-top: 12px; 
   margin-bottom: 12px;
 }
 
