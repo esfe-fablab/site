@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getBlogById } from '../../../../shared/api/articles';
-import Markdown from 'markdown-to-jsx'; // Asegúrate de instalar esta biblioteca
+import Markdown from 'markdown-to-jsx'; 
 import { Code } from '../../../../shared/components/CodeBlock'
+import { useLocalStorage } from "@uidotdev/usehooks";
 
 export const BlogView = () => {
   const { idBlog } = useParams();
+  const [isDark, setIsDark] = useLocalStorage("drawing", null);
   const [loading, setLoading] = useState(true);
   const [blogContent, setBlogContent] = useState('');
-  const [isDark, setIsDark] = useState(true)
+  // const [isDark, setIsDark] = useState(true)
 
   useEffect(() => {
     const fetchBlogContent = async () => {
