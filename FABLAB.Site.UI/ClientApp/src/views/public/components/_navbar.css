@@ -6,6 +6,7 @@
 	top: 0;
 	left: 0;
 	display: none;
+	z-index: 5;
 }
 
 .bg-modal-active {
@@ -23,29 +24,37 @@
 	padding: 15px 20px;
 }
 
+@media screen and (min-width: 720px) {
+	.navbar {
+		background: rgba(15, 2, 61, 0.726);
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(4.8px);
+		-webkit-backdrop-filter: blur(4.8px);
+	}
+}
 .navbar ul a {
 	text-decoration: none;
 	color: #bbb;
 	font-size: 1.2em;
 	padding: 5px 10px;
 	font-weight: 500;
+	z-index: 10;
 }
 .navbar ul a:hover {
 	transform: translateY(4px);
 	color: #fff;
 }
-.navbar ul a.butn{
+.navbar ul a.butn {
 	background: var(--tertiary);
 	border-radius: 10px;
 	color: #fff;
-	transition: background .2s;
+	transition: background 0.2s;
 }
 
-.navbar ul a.butn-i{
+.navbar ul a.butn-i {
 	background: #fff;
 	color: var(--tertiary);
 }
-
 
 .navbar img {
 	width: 60px;
@@ -64,8 +73,9 @@
 	align-items: center;
 	justify-content: center;
 	gap: 12px;
-	transition-duration: 0.5s;
+	transition-duration: 0.2s;
 	display: none;
+	user-select: none;
 }
 
 .bars {
@@ -76,7 +86,7 @@
 }
 
 #bar5 {
-	transition-duration: 0.8s;
+	transition-duration: 0.4s;
 }
 
 #bar4,
@@ -86,32 +96,35 @@
 
 .hamburger-active .bars {
 	position: absolute;
-	transition-duration: 0.5s;
+	transition-duration: 0.3s;
 }
 
 .hamburger-active #bar5 {
+	background:var(--secondary);
 	transform: scaleX(0);
-	transition-duration: 0.5s;
+	transition-duration: 0.3s;
 }
 
 .hamburger-active #bar4 {
+	background:var(--secondary);
 	width: 100%;
 	transform: rotate(45deg);
-	transition-duration: 0.5s;
+	transition-duration: 0.3s;
 }
 
 .hamburger-active #bar6 {
+	background:var(--secondary);
 	width: 100%;
 	transform: rotate(-45deg);
-	transition-duration: 0.5s;
+	transition-duration: 0.3s;
 }
 
 .hamburger-active {
-	transition-duration: 0.5s;
+	transition-duration: 0.3s;
 	transform: rotate(180deg);
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 620px) {
 	.hamburger {
 		display: flex;
 	}
@@ -119,10 +132,10 @@
 	.navbar ul {
 		position: fixed;
 		top: -10%;
-		right: -30%;
+		right: -35%;
 		width: 120vw;
 		height: 120vw;
-		background: #212121;
+		background: #d6d6d6;
 		border-radius: 50%;
 		display: flex;
 		flex-direction: column;
@@ -145,31 +158,33 @@
 	}
 
 	.navbar ul::before {
-		border: 6px solid #27280975;
+		border: 6px solid #c3c4a775;
 		border-top-color: var(--primary);
 		width: 95%;
 		height: 95%;
-		bottom: 1%;
-		left: 1%;
+		bottom: 2%;
+		left: 2%;
 		animation: giro 2s linear infinite;
 	}
 
 	.navbar ul::after {
-		border: 6px solid #27280975;
-		border-bottom-color: var(--secondary);
+		border: 6px solid #c3c4a775;
+		border-bottom-color: var(--tertiary);
 		width: 85%;
 		height: 85%;
 		bottom: 6%;
 		left: 6%;
-		animation: giro2 2s linear infinite;
+		animation: giro2 3s linear infinite;
 	}
 
 	.navbar ul a {
-		font-size: 1.6em;
+		color: #222;
+		font-size: 1.7em;
 		font-weight: 600;
-		line-height: 1.2;
+		line-height: 1.3;
 		opacity: 0.8;
 	}
+	.navbar ul a:hover{ color: #000;}
 }
 
 @keyframes giro {

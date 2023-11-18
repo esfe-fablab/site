@@ -11,16 +11,16 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className={`bg-modal ${isOpen ? 'bg-modal-active' : ''}`}></div>
+      <div onClick={()=> setIsOpen(false)} className={`bg-modal ${isOpen ? 'bg-modal-active' : ''}`}></div>
       <header id="header-1">
         {/* Aquí puedes agregar contenido adicional para el encabezado si es necesario */}
       </header>
       <nav className={`navbar z-10 ${isOpen ? 'navbar-active' : ''}`}>
         <img src="/img/logo/esfe-logo.png" alt="logo-esfe" />
         <ul>
-          <NavLink exact to="/">Inicio</NavLink>
-          <NavLink to="/blog">Blog</NavLink>
-          <NavLink to="/aprende">Aprende</NavLink>
+          <NavLink onClick={()=> setIsOpen(false)} exact to="/">Inicio</NavLink>
+          <NavLink onClick={()=> setIsOpen(false)} to="/blog">Blog</NavLink>
+          <NavLink onClick={()=> setIsOpen(false)} to="/aprende">Aprende</NavLink>
           {/* <a className="butn" href="#">Login</a>
           <a className="butn butn-i" href="#">Register</a> */}
         </ul>
