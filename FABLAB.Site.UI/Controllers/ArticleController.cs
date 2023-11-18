@@ -36,13 +36,15 @@ namespace FABLAB.Site.UI.Controllers
         }
 
         [HttpGet]
-        [Route("notice/{id:int}")]
-        public async Task<IActionResult> GetNoticeById(int id)
+        [Route("notice/{title}")]
+        public async Task<IActionResult> GetNoticeById(string title)
         {
+            title = title.Replace("-", " ");
+
             List<ArticleDTO> articles = await _ArticleService.GetAll();
             var filter = articles.Where(article => article.ArticleType == "Noticia").ToList();
 
-            var article = filter.FirstOrDefault(a => a.Id == id);
+            var article = filter.FirstOrDefault(a => a.Title.ToLower() == title.ToLower());
 
             if (article == null)
             {

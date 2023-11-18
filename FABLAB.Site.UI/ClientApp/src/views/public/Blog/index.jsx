@@ -29,7 +29,7 @@ export const Blog = () => {
 
       <div className='container-cards'>
         {notices.map((notice) => (
-          <Card key={notice.id} title={notice.title} description={notice.description} user={notice.systemUser} id={notice.id}/>
+          <Card key={notice.id} title={notice.title} description={notice.description} user={notice.systemUser} />
         ))}
       </div>
     </section>
