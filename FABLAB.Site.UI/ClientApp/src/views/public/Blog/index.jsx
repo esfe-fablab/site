@@ -22,7 +22,7 @@ export const Blog = () => {
   }, []);
 
   return (
-    <section>
+    <section className='pb-[100px]'>
       <div className='mt-9 mb-3'>
         <h1 className='mt-6 text-5xl text-center'>Blog</h1>
       </div>

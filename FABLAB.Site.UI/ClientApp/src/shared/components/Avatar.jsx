@@ -57,6 +57,7 @@ const AvatarFallback = React.forwardRef((props, ref) => {
       style={{ backgroundColor: randomColor, ...restProps.style }}
     >
       {getFallbackName(props.children)}
+      test
     </AvatarPrimitive.Fallback>
   );
 });
